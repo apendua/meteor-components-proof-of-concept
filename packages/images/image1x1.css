@@ -1,0 +1,11 @@
+.image1x1 {
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+}
+
+.image1x1 img {
+    width: 100%;
+    pointer-events: none;
+}
