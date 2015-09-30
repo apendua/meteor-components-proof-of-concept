@@ -1,0 +1,19 @@
+<template name="__imageUploader">
+{{#droparea class="__imageUploader"}}
+<div class="ui uploader card">
+    {{#if isUploading}}
+    <div class="ui active dimmer">
+        <div class="ui text loader"><i class="ui cloud upload icon"></i></div>
+    </div>
+    {{/if}}
+    
+    {{> image1x1 src=getImageUrl}}
+    
+    {{#if isUploading}}
+    <div class="ui bottom attached progress">
+        <div class="bar"></div>
+    </div>
+    {{/if}}
+</div>
+{{/droparea}}
+</template>
