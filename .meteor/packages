@@ -8,3 +8,5 @@ meteor-platform
 autopublish
 insecure
 semantic:ui-css
+custom:image-uploader
+custom:form
