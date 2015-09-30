@@ -7,3 +7,10 @@ Helpers.define('avatarUrl', function () {
 
 Helpers.registerAs('$');
 
+Template.body.onCreated(function () {
+    
+    if (!Meteor.userId() && !Meteor.loggingIn()) {
+        Accounts.createUser({ username: 'test', password: 'secret' });
+    }
+    
+});
