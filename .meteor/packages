@@ -10,3 +10,8 @@ insecure
 semantic:ui-css
 custom:image-uploader
 custom:form
+jagi:astronomy
+anti:helpers
+accounts-base
+accounts-password
+chrismbeckett:toastr

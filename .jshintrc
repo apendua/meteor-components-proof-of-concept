@@ -123,6 +123,16 @@
         "Random": false,
         "_": false,
         "$": false,
-        "jQuery": false
+        "jQuery": false,
+        "Astro": false,
+        "AntiHelpers": false,
+        
+        // custom
+        
+        "ImageUploader": false,
+        "ImageUploads": false,
+        "ImageUpload": false,
+        "Form": false,
+        "Helpers": false
     }
 }
