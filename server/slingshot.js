@@ -5,6 +5,11 @@ var regionForUploads = Meteor.settings.AWSRegion;
 var accessKeyId = Meteor.settings.AWSAccessKeyId;
 var secretAccessKey = Meteor.settings.AWSSecretAccessKey;
 
+if (!bucketForUploads || !regionForUploads || !accessKeyId || !secretAccessKey) {
+    console.warn('Amazon credentials are incomplete. Image uploads will be disabled.');
+    return;
+}
+
 Slingshot.createDirective("imagesUploadedByUsers", Slingshot.S3Storage, {
     
     AWSAccessKeyId: accessKeyId,
