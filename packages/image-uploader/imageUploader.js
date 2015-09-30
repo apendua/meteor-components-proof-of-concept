@@ -29,6 +29,7 @@ ImageUploader = function (options) {
                 isUploading.set(false);
                 //---------------------
                 if (error) {
+                    toastr.error(error.message, 'While uploading file');
                     if (options.onError) {
                         options.onError(uploadId, error);
                     }
