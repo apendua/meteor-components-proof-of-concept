@@ -15,7 +15,7 @@ Form = function (options) {
                 if (options.getValue) {
                     return options.getValue(name);
                 }
-                return this && this[name];
+                return this && this.value;
             },
             typeIs: function (type) {
                 return this.type === type;
@@ -38,6 +38,18 @@ Form = function (options) {
             fields: fields
         }, options));
     });
+    
+    var update = _.debounce(function (e) {
+        if (options.onUpdate) {
+            options.onUpdate($(e.target).attr('name'), $(e.target).val());
+        }
+    }, 500);
+
+    template.events({
+        'change [name]': update,
+        'keyup [name]': update,
+    });
+
 
     return template;
 };

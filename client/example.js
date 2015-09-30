@@ -12,6 +12,17 @@ Template.example.helpers({
 Template.example.onCreated(function () {
   
     this.form = new Form({
+        
+        onUpdate: function (name, value) {
+            Meteor.users.update({ _id: Meteor.userId() }, {
+                $set: _.object( [ 'profile.' + name ], [ value ]),
+            });
+        },
+        getValue: function (name) {
+            var user = Meteor.user();
+            return user && user.profile && user.profile[name];
+        },
+        
         on: 'blur',
         inline: true,
         fields: {
@@ -45,7 +56,7 @@ Template.example.onCreated(function () {
                      }
                 ]
             },
-        }
+        },
     });
     
     this.uploader = new ImageUploader({
