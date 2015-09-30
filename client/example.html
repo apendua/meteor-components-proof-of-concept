@@ -3,15 +3,18 @@
 <h4 class="ui dividing header">
     Personal information
 </h4>
-<div class="fields">
-    {{> myForm.fields.firstName class="eight wide"}}
-    {{> myForm.fields.lastName class="eight wide"}}
-</div>
-<div class="required field">
-    <label>Name</label>
-    <div class="two fields">
-    {{> myForm.fields.firstName noLabel=true}}
-    {{> myForm.fields.lastName noLabel=true}}
+<div class="ui stackable grid">
+    <div class="six wide column">
+        <div class="ui segment">
+            {{> myUploader}}
+        </div>
+    </div>
+    <div class="ten wide column">
+        <div class="fields">
+            {{> myForm.fields.firstName class="eight wide"}}
+            {{> myForm.fields.lastName class="eight wide"}}
+        </div>
+        {{> myForm.fields.biography type="textarea" class="required"}}
     </div>
 </div>
 <div class="ui submit button">Save</div>
