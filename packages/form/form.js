@@ -1,8 +1,8 @@
-Form = function (options) {
-    'use strict';
+/*jshint -W020*/
+'use strict';
 
+Form = function (options) {
     var template = new Template('form', Template.__form.renderFunction);
-    var context = {};
 
     template.fields = {};
 
@@ -12,8 +12,14 @@ Form = function (options) {
         t.helpers({
             name: name,
             value: function () {
-                return this[name] || Template.parentData()[name];
-            }
+                if (options.getValue) {
+                    return options.getValue(name);
+                }
+                return this && this[name];
+            },
+            typeIs: function (type) {
+                return this.type === type;
+            },
         });
         template.fields[name] = t;
     });

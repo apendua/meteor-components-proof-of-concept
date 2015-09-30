@@ -1,0 +1,12 @@
+<template name="__formField">
+<div class="{{class}} field">
+    {{#unless ./noLabel}}
+    <label>{{label}}</label>
+    {{/unless}}
+    {{#if typeIs 'textarea'}}
+        <textarea name="{{name}}" placeholder="{{placeholder}}">{{value}}</textarea>
+    {{else}}
+        <input type="text" name="{{name}}" placeholder="{{placeholder}}" value="{{value}}">
+    {{/if}}
+</div>
+</template>
