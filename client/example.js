@@ -55,6 +55,7 @@ Template.example.onCreated(function () {
             upload.set('title', file.name);
             upload.set('size', file.size);
             upload.set('status', 'uploading');
+            upload.set('createdBy', Meteor.userId());
             upload.save(cb);
         },
         getImageUrl: function () {

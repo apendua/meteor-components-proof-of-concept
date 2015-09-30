@@ -126,6 +126,8 @@
         "jQuery": false,
         "Astro": false,
         "AntiHelpers": false,
+        "Slingshot": false,
+        "toastr": false,
         
         // custom
         

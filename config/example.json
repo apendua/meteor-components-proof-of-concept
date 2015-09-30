@@ -1,0 +1,9 @@
+{
+    "AWSBucket": "",
+    "AWSRegion": "",
+    "AWSAccessKeyId": "",
+    "AWSSecretAccessKey": "",
+    "public": {
+        "maxKBytesPerImage": 200
+    }
+}
