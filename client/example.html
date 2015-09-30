@@ -1,0 +1,19 @@
+<template name="example">
+{{#myForm firstName="Tomasz" lastName="Lenarcik"}}
+<h4 class="ui dividing header">
+    Personal information
+</h4>
+<div class="fields">
+    {{> myForm.fields.firstName class="eight wide"}}
+    {{> myForm.fields.lastName class="eight wide"}}
+</div>
+<div class="required field">
+    <label>Name</label>
+    <div class="two fields">
+    {{> myForm.fields.firstName noLabel=true}}
+    {{> myForm.fields.lastName noLabel=true}}
+    </div>
+</div>
+<div class="ui submit button">Save</div>
+{{/myForm}}
+</template>

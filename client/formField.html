@@ -1,0 +1,8 @@
+<template name="__formField">
+<div class="{{class}} field">
+    {{#unless ./noLabel}}
+    <label>{{label}}</label>
+    {{/unless}}
+    <input type="text" name="{{name}}" placeholder="{{placeholder}}" value="{{value}}">
+</div>
+</template>
